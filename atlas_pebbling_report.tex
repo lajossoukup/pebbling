@@ -1,0 +1,49 @@
+\documentclass{amsart}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+
+\title{Pebbling Atlas Report}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+This report summarizes the pebbling tests over the NetworkX graph atlas.
+Only connected graphs with at least two vertices are processed by the program.
+
+\section*{Counts}
+
+\begin{center}
+\begin{tabular}{lr}
+\toprule
+Quantity & Count \\
+\midrule
+Graphs in the NetworkX atlas & 1253 \\
+Connected graphs tested & 995 \\
+Connected non-bipartite graphs tested & 924 \\
+Successful stacked-almost-stacked tests & 995 \\
+Unsuccessful stacked-almost-stacked tests & 0 \\
+Successful clear-almost-stacked tests & 924 \\
+Unsuccessful clear-almost-stacked tests & 0 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section*{Failures}
+
+Atlas indices failing \texttt{is\_critical\_stacked\_almost\_stacked}:
+\[
+\text{none}
+\]
+
+Atlas indices failing \texttt{is\_critical\_clear\_almost\_stacked}:
+\[
+\text{none}
+\]
+
+\end{document}
