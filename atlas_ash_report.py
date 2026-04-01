@@ -1,4 +1,4 @@
-"""Generate a LaTeX summary report for pebbling tests on the graph atlas."""
+"""Generate a LaTeX summary report for ASH checks on the graph atlas."""
 
 from __future__ import annotations
 
@@ -38,7 +38,7 @@ def evaluate_connected_atlas_graphs(
     limit: int | None = None,
     progress_every: int = 0,
 ) -> TestSummary:
-    """Run the pebbling checks on every connected graph in the NetworkX atlas."""
+    """Run the ASH checks on every connected graph in the NetworkX atlas."""
     summary = TestSummary()
 
     for atlas_index, graph in enumerate(nx.graph_atlas_g()):
@@ -94,7 +94,7 @@ def build_report(summary: TestSummary) -> str:
 \usepackage{{amsmath,amssymb}}
 \usepackage{{booktabs}}
 
-\title{{Pebbling Atlas Report}}
+\title{{Atlas ASH Report}}
 \author{{}}
 \date{{}}
 
@@ -102,7 +102,7 @@ def build_report(summary: TestSummary) -> str:
 
 \maketitle
 
-This report summarizes the pebbling tests over the NetworkX graph atlas.
+This report summarizes the almost stacked hypothesis checks over the NetworkX graph atlas.
 Only connected graphs with at least two vertices are processed by the program.
 
 \section*{{Counts}}
@@ -142,11 +142,11 @@ Atlas indices failing \texttt{{is\_critical\_clear\_almost\_stacked}}:
 def parse_args() -> argparse.Namespace:
     """Parse command-line arguments."""
     parser = argparse.ArgumentParser(
-        description="Generate a LaTeX pebbling report for graph atlas graphs."
+        description="Generate a LaTeX report for ASH checks on graph atlas graphs."
     )
     parser.add_argument(
         "--output",
-        default="atlas_pebbling_report.tex",
+        default="atlas_ash_report.tex",
         help="Path of the generated LaTeX report.",
     )
     parser.add_argument(

@@ -7,7 +7,7 @@ together with scripts that generate LaTeX reports used in the paper.
 
 - `pebbling.py`: core `Pebbling` class and helper functions
 - `test_pebbling.py`: unit tests
-- `atlas_pebbling_report.py`: generates a LaTeX report for connected graphs in the NetworkX graph atlas
+- `atlas_ash_report.py`: generates a LaTeX report for almost stacked hypothesis checks on connected graphs in the NetworkX graph atlas
 - `atlas_tree_estimation.py`: generates a LaTeX report comparing `stacking_number` and `tree_estimation` on atlas trees
 - `special_graph_pebbling_report.py`: generates a LaTeX report for selected graph families
 
@@ -16,7 +16,7 @@ together with scripts that generate LaTeX reports used in the paper.
 Generate the atlas report:
 
 ```bash
-python atlas_pebbling_report.py
+python atlas_ash_report.py
 ```
 
 Generate the tree estimation report:
@@ -41,7 +41,7 @@ pytest
 
 The scripts above write LaTeX files in the current directory:
 
-- `atlas_pebbling_report.tex`
+- `atlas_ash_report.tex`
 - `atlas_tree_estimation_report.tex`
 - `special_graph_pebbling_report.tex`
 
